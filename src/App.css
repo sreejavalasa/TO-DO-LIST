@@ -1,0 +1,133 @@
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;;
+  background-image: url('./assets/image1.jpeg');  /* Example path */
+   /* Add your image path here */
+  background-size: cover; /* Makes sure the image covers the entire screen */
+  background-position: center;
+}
+
+.App {
+  background: rgba(255, 255, 255, 0.8); /* Makes the App container slightly transparent */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Ensures the App container does not get too wide */
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+}
+
+
+/* src/App.css */
+/* Additional styles for smaller screens */
+@media (max-width: 768px) {
+  .App {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .input, .button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .todo-text {
+    font-size: 14px;
+  }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 480px) {
+  .App {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .input, .button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .todo-text {
+    font-size: 12px;
+  }
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.button {
+  padding: 10px 15px;
+  border: none;
+  background: #5c67f2;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #4b56c2;
+}
+
+
+.todo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo:last-child {
+  border-bottom: none;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 16px;
+  text-align: left;
+}
+
+.todo.completed .todo-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.remove-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: background 0.3s;
+}
+
+.remove-button:hover {
+  background: darkred;
+}
